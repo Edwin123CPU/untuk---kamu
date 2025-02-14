@@ -41,6 +41,11 @@
         .hidden {
             display: none;
         }
+        .next-button {
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 <body>
@@ -54,6 +59,12 @@
     <div id="loveMessage" class="hidden">
         <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart" width="100">
         <p style="font-size: 20px; font-weight: bold;">Mau jalan kapan sayang?? ❤️</p>
+        <button class="button next-button" onclick="showNextButtons()">Hari Ini</button>
+        <button class="button next-button" onclick="showNextButtons()">Besok</button>
+    </div>
+
+    <div id="finalMessage" class="hidden">
+        <p style="font-size: 20px; font-weight: bold;">Oke siap-siap ya, terus jangan lupa chat kabarin aku kalau udah siap!</p>
     </div>
 
     <script>
@@ -68,6 +79,11 @@
         function showLove() {
             document.querySelector('.container').classList.add('hidden');
             document.getElementById('loveMessage').classList.remove('hidden');
+        }
+
+        function showNextButtons() {
+            document.getElementById('loveMessage').classList.add('hidden');
+            document.getElementById('finalMessage').classList.remove('hidden');
         }
     </script>
 
